@@ -87,15 +87,29 @@ namespace _0317001
         }
 
         static void Main8(string[] args)
-        {//step8 定義商 功能:假設某數值可以被3整除
-         //www.itjsxx.com/csharp/csharp_exact_division.html
-         //判斷是否整除USE result%3==0
-           int number;
+        {//List step8 定義商 功能:假設某數值可以被3整除
+         //reference : www.itjsxx.com/csharp/csharp_exact_division.html
+         //USE result%3==0
+            int number;
             number = 3;//IF
             if (number % 3 == 0) Console.WriteLine(true);
             else Console.WriteLine(false);            
         }
+        static void Main(string[] args)
+        {//List step9: loop, all can%3==0
+                int result = 0;
+                for (int i = 0; i < 100; i++)
+                {
+                    if ((i % 3) == 0)
+                    {
+                        //result = result+ i;
+                        result += i;
+                    }
+                }
+                Console.WriteLine("All the numbers which can%3 ==0 is tatol " + result);
+                Console.ReadKey();
 
+            }
 
     }
 }
