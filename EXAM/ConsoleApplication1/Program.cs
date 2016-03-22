@@ -27,9 +27,7 @@ namespace _0317001
         }
         static void Main2(string[] args)
         {//ListStep3 (2): string replace
-            /*
-            reference:msdn.microsoft.com/zh-tw/library/fk49wtc1(v=vs.110).aspx
-            */
+            /*reference:msdn.microsoft.com/zh-tw/library/fk49wtc1(v=vs.110).aspx*/
             string in3021 = "this is string.";
             Console.WriteLine("Original:{0}'{1}'{0}", Environment.NewLine, in3021);
             string in3022 = in3021.Replace("string", "ing");
@@ -66,7 +64,7 @@ namespace _0317001
 
 
         static void Main6(string[] args)
-        {//ListStep6 By web
+        {//ListStep6 
          /*reference:msdn.microsoft.com/zh-tw/library/system.string.format(v=vs.110).aspx*/
             var QQ = string.Format("This {0} string", "is");
 
@@ -75,7 +73,7 @@ namespace _0317001
 
 
         static void Main7(string[] args)
-        {//ListStep7 int 轉換 string
+        {//ListStep7 int => string
          /*reference Web:takamai.pixnet.net/blog/post/34831317-c%23%EF%BC%8Cint%E8%BD%89%E6%88%90string%EF%BC%8Cstring%E8%BD%89%E6%88%90int*/
             {
                 var i = 10;
@@ -95,7 +93,7 @@ namespace _0317001
             if (number % 3 == 0) Console.WriteLine(true);
             else Console.WriteLine(false);            
         }
-        static void Main(string[] args)
+        static void Main9(string[] args)
         {//List step9: loop, all can%3==0
                 int result = 0;
                 for (int i = 0; i < 100; i++)
@@ -110,7 +108,31 @@ namespace _0317001
                 Console.ReadKey();
 
             }
+        static void Main10(string[] args)
+        {//List step10:
+         //reference:msdn.microsoft.com/zh-tw/library/aa288453(v=vs.71).aspx
+            string[] sample = new string[4] { "this", "is", "sample", "string" };
+            for (int i = 0; i < sample.Length; i++) ;
+            Console.WriteLine("show you the third is " + sample[2]);
+            Console.ReadKey();
+        }
+        static void Main(string[] args)
+        {//ListStep11:
+            //reference: msdn.microsoft.com/zh-tw/library/aa287730(v=vs.71).aspx
+            string[] samplestrat = new string[4] { "this", "is", "sample", "string" };
+            string findout = "ple";
+            int strNumber;
+            int strIndex = 0;
+            for (strNumber = 0; strNumber < samplestrat.Length; strNumber++)
+            {
+                strIndex = samplestrat[strNumber].IndexOf(findout);
+                if (strIndex >= 0) 
+                    break;
+            }
+            Console.WriteLine("欲搜尋的字元出現字串位置:{0} \n於此字串的字元位置:{1}", strNumber, strIndex);
+            Console.ReadKey();
 
+        }
     }
 }
 
